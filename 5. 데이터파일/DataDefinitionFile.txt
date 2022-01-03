@@ -1,0 +1,42 @@
+Member.txt (회원데이터파일) (300개)
+String id : 아이디(영소문자,숫자만 사용 5~12자리, 중복없음) *관리자 : admin 
+String password : 비밀번호(영대소문자,숫자만 사용 4~12자리 대소문자 구분) *관리자 : 1234
+String name : 이름 (한글 2~4글자)
+int age : 나이 (1~99)
+String tel : 전화번호 (010-숫자4자리-숫자4자리)
+int address : 주소지 (1~5)
+	1.남현동 2.사당1동 3.사당4동 4.방배2동 5.기타주소
+int veg : 베지테리언단계(8단계)(1~8)
+	1.플렉시테리언 2.플로페스코 3.페스코 4.락토오보 5.오보 6.락토 7.비건 8.프로테리언
+
+id,password,name,age,tel,address,veg
+admin,1234,admin,0,010-0000-0000,5,1 // 관리자
+nxgdbj8,li2JFOV,강열경,5,010-4059-3338,3,5 // 일반 회원
+
+
+PaymentList.txt (결제내역데이터파일) (100개)
+int seq : 상품번호 
+String id : 구매자 아이디
+String ProductName : 구매 상품명 
+int ProductCount : 구매수량 (1~10)
+int ProductPrice : 가격 (100 ~ 1,000,000)
+Boolean ShipInfo : 배송정보(배송가능 or 배송불가)
+String buy : 구매수단(카드 or 현금)
+
+seq,id,ProductName,ProductCount,ProductPrice,ShipInfo,buy
+3,nxgdbj8,고등어,10,3645,F,카드
+
+
+Product.txt (상품데이터파일) (100개)
+int seq : 상품번호 (자동할당)
+String ProductName : 이름
+String[] category : 상품카테고리 (다중입력가능 ■로 구분)
+String manufacturer : 제조사
+String[] substitute : 상품검색어 (다중입력가능 ■로 구분, 상품카테고리 상품명 자동할당)
+int veg : 베지테리언단계(1~8)
+boolean minor : 미성년자구매가능여부 
+int ProductCount : 상품수량(0~9,999, 초기기본값 100 자동할당)
+int ProductPrice : 가격(100 ~ 1,000,000)
+
+seq,ProductName,category,manufacturer,substitute,veg,minor,ProductCount,ProductPrice
+2,자두,과일,국산,자두■과일■프로테리언,8,T,151,3790
